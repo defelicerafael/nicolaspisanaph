@@ -1,0 +1,106 @@
+
+* {
+    box-sizing: border-box;
+    margin:0; 
+    padding:0
+}
+:root{
+    --primario: #9C1914;
+    --secundario: #00A0E6;
+    --variante: #FF010B;
+    --oscuro: #1b1b1b;
+    --blanco: white;
+    --gris-oscuro : #515151;
+}
+html {
+  scroll-behavior: smooth;
+}
+body,html{
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 0.15em;
+    height: 100vh;
+    width: 100%;
+    background-color: white;
+   
+}
+.altura-max{
+    height: 1500px !important;
+   
+}
+.bg-gris{
+    background-color: var(--gris-oscuro);
+}
+.bg-oscuro{
+    background-color: var(--gris-oscuro);
+}
+.bg-blanco{
+    background-color: var(--blanco);
+}
+.bg-transparent{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.menu-shadow{
+    box-shadow: 0 4px 10px -10px rgb(0 0 0 / 60%);
+}
+.gris-oscuro{
+    color: var(--gris-oscuro);
+}
+.text-shadow{
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0.05;
+        -ms-transform: scale(0.1); /* IE 9 */
+        transform: scale(0.1); /* Standard syntax */
+    }
+    100% {
+        opacity: 1;
+        -ms-transform: scale(1); /* IE 9 */
+        transform: scale(1); /* Standard syntax */
+     }
+}
+.fadeIn{
+    animation: fadeInAnimation ease 0.7s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+#textobio{
+    font-size: 0.9em;
+}
+/* Container needed to position the overlay. Adjust the width as needed */
+
+.pointer{
+    cursor: pointer;
+}
+
+
+.imgmodal{
+    width: auto;
+    height: 85%;
+    max-width: 75%;
+    max-height: 85vh;
+}
+/* FILTROS */
+/*.img-filter {
+  
+    display: none; 
+}
+*/
+  
+  /* The "show" class is added to the filtered elements */
+  .show {
+    display: inline-block;
+  }
+
+  .img-full {  max-width: 100%;  height: auto; } 
+
+@media (max-width: 991.98px) {
+    .imgmodal{
+        width: 95%;
+        height: auto;
+        max-width: 95%;
+        max-height: 90vh;
+    } 
+}
