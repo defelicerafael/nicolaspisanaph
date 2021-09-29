@@ -21,7 +21,7 @@
                     active = "";
                 }
                 dentro_carousel.innerHTML +=  '<div class="carousel-item '+active+'">'
-                                        +'<img src="'+json[x]['img_home']+'" class="mx-auto d-block w-100" alt="'+json[x]['img_home']+'">'
+                                        +'<img src="'+json[x]['img_home']+'" class="mx-auto d-block w-100 carousel-cel" alt="'+json[x]['img_home']+'">'
                                         +'<div class="carousel-caption d-block">'
                                             +'<h1 class="">MAKE UP ARTIST</h1>'
                                              +'<button type="button" class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"> CONTACT ME </button>'

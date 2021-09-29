@@ -27,7 +27,10 @@ if ($id =="si") {
     }
 }
 
-//print_r($select);
+$contar = count($select);
+for($i=0;$i<$contar;$i++){
+    $select[$i]['texto'] = html_entity_decode($select[$i]['texto']);
+}
 
 $null = is_null($select);
 if($null==true){

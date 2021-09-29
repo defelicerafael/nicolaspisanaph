@@ -18,7 +18,7 @@
       //  console.log(file);
         let myObject = await fetch(file);
         let myText = await myObject.json();
-        //console.log(myText);
+        console.log(myText);
         fotobio.src = myText[0].img;
         textobio.innerHTML = myText[0].texto.replace(/\n/g, "<br/>");
     }

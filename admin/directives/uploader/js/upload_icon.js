@@ -93,7 +93,10 @@
 
 
                     $scope.guardar = function(){
-                        $scope.armoDatos = '{"'+$scope.cliqueando+'":"img/home/'+$scope.db+'/'+$scope.foto+'"}';
+                        $scope.dirimg = $scope.dirimg.slice(3);
+                        console.log($scope.dirimg);
+                        $scope.armoDatos = '{"'+$scope.cliqueando+'":"'+$scope.dirimg+$scope.foto+'"}';
+                        console.log($scope.armoDatos);
                         $scope.EditLink(JSON.parse($scope.armoDatos),$scope.db,$scope.id,2);
                     }
 

@@ -18,32 +18,16 @@ $ccsi = new Sql;
 
 foreach($array as $key=>$dato){
     if(!empty($dato)){
-        if($key=="retiro"){
-            if($dato=='si'){
-            $array["fecha_retiro"]= $hoy;
-          //  print_r($array);
-            }
-            if($dato=='no'){
-            $array["fecha_retiro"] = "0000-00-00 00:00:00";
-         //   print_r($array);
-            }
-        }
-        
-        if($key=="pagado"){
-            if($dato=='si'){
-            $array["fecha_pago"]= $hoy;
-         //   print_r($array);
-            }
-            if($dato=='no'){
-            $array["fecha_pago"] = "0000-00-00 00:00:00"; 
-         //   print_r($array);
-            }
+        if($key=="texto"){
+            $dato = htmlentities($dato,ENT_QUOTES);
+            //echo $dato;
         }
     }
-}
-foreach($array as $key=>$dato){
     $ccsi->edit($tabla,$key,$dato,$where,$id);
 }
+/*foreach($array as $key=>$dato){
+    
+}*/
 
 $mal = $ccsi->getMal();
 if($mal>0){

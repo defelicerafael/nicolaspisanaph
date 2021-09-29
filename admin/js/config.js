@@ -37,6 +37,11 @@
                     controller:"Ctrl",
                     controllerAs : "ctrl"
                 })
+                .when("/panel/blog/fotos/id/:idArt",{
+                    templateUrl:"templates/fotos_blog.html",
+                    controller:"Ctrl",
+                    controllerAs : "ctrl"
+                })
                 .when("/panel/bio/",{
                     templateUrl:"templates/panel_bio.html",
                     controller:"Ctrl",

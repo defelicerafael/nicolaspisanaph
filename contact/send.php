@@ -50,10 +50,10 @@ $telefono = $_POST["telefono"];
 $comentario = $_POST["comentario"];
     
 $smtpHost = "c2300137.ferozo.com";  // Dominio alternativo brindado en el email de alta 
-$smtpUsuario = "no-reply@c2300137.ferozo.com";  // Mi cuenta de correo
-$smtpClave = 'pD3F36XDSr';  // Mi contraseña
+$smtpUsuario = "admin@natcordoba.com.ar";  // Mi cuenta de correo
+$smtpClave = 'N4tC0rd0b4';  // Mi contraseña
 
-$cuerpo = "Hola Natt :) a llegado un mensaje v&iacute;a web! \n\n";
+$cuerpo = "Hola Natt :) ha llegado un mensaje v&iacute;a web! \n\n";
 $cuerpo .= $nombre." se ha contactado por el formulario de Self Make Up. \n\n";
 $cuerpo .= "Su apellido es: ".$apellido."\n";
 $cuerpo .= "Su email es: ".$email."\n";
@@ -77,7 +77,8 @@ $mail->Password = $smtpClave;
 
 $mail->From = $smtpUsuario; // Email desde donde envío el correo.
 $mail->FromName = "natcordoba.com.ar - Self MakeUp";
-$mail->AddAddress("defelicerafael@gmail.com"); 
+$mail->AddAddress("hola@natcordoba.com.ar"); 
+//$mail->AddAddress("defelicerafael@gmail.com"); 
                     //$mail->AddAddress($emailMili);
                     //$mail->AddAddress($emailJuli);// Esta es la dirección a donde enviamos los datos del formulario
 $mail->AddReplyTo("admin@natcordoba.com.ar"); // Esto es para que al recibir el correo y poner Responder, lo haga a la cuenta del visitante. 
@@ -98,7 +99,7 @@ $mail->SMTPOptions = array(
 
 $estadoEnvio = $mail->Send(); 
     if($estadoEnvio){
-        echo "El correo fue enviado correctamente.<br/>Lo contactaremos a la brevedad.";
+        echo "El correo fue enviado correctamente.<br/>nos contactaremos a la brevedad.";
         
     } else {
         echo "Ocurrió un error inesperado.";

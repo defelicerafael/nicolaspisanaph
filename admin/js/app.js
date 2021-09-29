@@ -224,6 +224,8 @@ angular.module('App', ['ngMaterial', 'ngMessages','config','Header','ngAnimate',
                 });
         };     
 
+        
+
        app.traerCarousel = function(c){
         //console.log(c);
            app.loadingMostrarTodo = true;
@@ -429,7 +431,7 @@ angular.module('App', ['ngMaterial', 'ngMessages','config','Header','ngAnimate',
     
     
     app.Edit = function (datosi,tablai,idi,show){
-    // console.log(datosi);  
+        //console.log(datosi);  
        app.isEditing=true;
        var where = 'id';
        var datos = datosi;
@@ -438,7 +440,7 @@ angular.module('App', ['ngMaterial', 'ngMessages','config','Header','ngAnimate',
        var id = idi;
        var show = "1";
        SqlEdit.async(link,datos,tabla,id,where).then(function(d){
-           // console.log(d);
+            //console.log(d);
             app.showSimpleToast(d);
             app.isEditing = false;
             window.history.back();

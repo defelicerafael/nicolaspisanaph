@@ -12,7 +12,7 @@
                                     <p> {{datos.titulo}}</p>
                                     <h4>{{datos.date}}</h4>
                                 </div>
-                                <md-button class="md-icon-button" ng-href="#!/panel/fotos/id/{{datos.id}}" aria-label="foto">
+                                <md-button class="md-icon-button" ng-href="#!/panel/blog/fotos/id/{{datos.id}}" aria-label="foto">
                                     <md-tooltip md-direction="top">Cambiar Foto</md-tooltip>
                                     <md-icon md-svg-icon="img/icon/add_photo_alternate-black-24dp.svg"></md-icon>
                                 </md-button>
@@ -38,7 +38,10 @@
                               <div ng-message="required">Le solicito por favor un título</div>
                             </div>
                         </md-input-container>
-                        
+                        <!--<md-input-container>
+                            <label>fecha</label>
+                            <md-datepicker ng-model="ctrl.item.date" aria-label="Enter date"></md-datepicker>
+                        </md-input-container>-->
                         <div layout="row" layout-align="end center">   
                             <md-button type="submit" class="md-raised md-primary">INGRESAR</md-button>
                         </div>

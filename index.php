@@ -38,16 +38,16 @@ if(include_once 'server/funciones.php'){
         <meta property="og:type"          content="website" />
         <meta property="og:title"         content="Nat Córdoba - Make Up Artist - Hairdresser" />
         <meta property="og:description"   content="Nat Córdoba - El Blog De Natt - Make Up Artist - Hairdresser" />
-        <meta property="og:image"         content="img/home/bio/bio-1.jpg" />
+        <meta property="og:image"         content="https://natcordoba.com.ar/img/seo.jpg" />
     </head>
     <body>
-            <?php include_once "templates/ads.php";?>
+            <?php //include_once "templates/ads.php";?>
             <?php include_once "templates/top-nav-comun.php";?>
             <?php include_once "templates/carousel-arriba.php";?>
         
             <?php include_once "templates/menu.php";?>
             <?php include_once "templates/portfolio-ajax.php";?>
-            <?php include_once "templates/frase.php";?>
+            <?php //include_once "templates/frase.php";?>
             <?php include_once "templates/bio.php";?>
             <?php include_once "templates/blog.php";?>
             <?php include_once "templates/self-makeup.php";?>
@@ -60,7 +60,7 @@ if(include_once 'server/funciones.php'){
         <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
         
         <!--<script src="lib/masonry/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"></script>-->
-        <script src="js/ads.js"></script>
+        <!--<script src="js/ads.js"></script>-->
         <script src="js/app.js"></script>
         <script src="js/blog.js"></script>
         <script src="js/bio.js"></script>
