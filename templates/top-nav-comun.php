@@ -1,5 +1,5 @@
 
-<nav id="navbar-rafu-spy" class="navbar fixed-top navbar-expand-lg navbar-light bg-primario menu-shadow">
+<nav id="" class="navbar fixed-top navbar-expand-lg navbar-light bg-primario menu-shadow">
     <div class="container py-2">
         
         <a class="navbar-brand text-center text-white" href="<?php echo $link;?>">NICOLÁS PISANA</a>
