@@ -26,7 +26,11 @@ if(include_once 'server/funciones.php'){
         <link rel="stylesheet" type="text/css" href="css/app.css">
         <link rel="stylesheet" type="text/css" href="css/animaciones.css">
         <link rel="stylesheet" type="text/css" href="css/masonry.css">
-       
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <!-- GOOGLE FONTS -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        
         <!-- META DESCRIPTION -->
         <meta name="description" content="Nicolás Pisana - Fotografía">
         
@@ -56,11 +60,10 @@ if(include_once 'server/funciones.php'){
         <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
         
         <!--<script src="lib/masonry/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"></script>-->
-        <!--<script src="js/ads.js"></script>-->
-       <!-- <script src="js/app.js"></script>
-        <script src="js/blog.js"></script>
+         <!-- <script src="js/app.js"></script>
+            <script src="js/blog.js"></script>-->
         <script src="js/bio.js"></script>
-        <script src="js/self.js"></script>-->
+        
         <script src="js/archivos.js"></script>
         <!--script src="js/contact.js"></script>
         <script src="js/carousel.js"></script>-->
