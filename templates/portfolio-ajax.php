@@ -1,10 +1,9 @@
 <?php
     include_once 'server/archivos_back.php';
-   
 ?>
 <div class="px-md-5 mx-md-5 px-4 mx-0">
         <div class="mansonry_row"  id="archivos"></div>
-        <button id="mas_fotos" type="button" class="btn btn-outline-secondary mx-auto d-block mt-3">Ver más fotos</button>
+        <!--<button id="mas_fotos" type="button" class="btn btn-outline-secondary mx-auto d-block mt-3">Ver más fotos</button>-->
 </div>
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

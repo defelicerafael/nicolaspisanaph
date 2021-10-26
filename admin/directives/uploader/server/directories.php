@@ -7,7 +7,7 @@ $objDatos = json_decode(file_get_contents('php://input'), true);
 $dir = $objDatos['dir'];
 //echo $dir;
 
-$directorio = "../../../../img/home/articulos/$dir";
+$directorio = "../../../../img/home/$dir";
 $ficheros1  = scandir($directorio);
 $outp = "";
 foreach($ficheros1 as $f){

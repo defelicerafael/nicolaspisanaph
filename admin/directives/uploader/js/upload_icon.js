@@ -92,6 +92,14 @@
                     };
 
 
+                    $scope.historyback = function(){
+                        $timeout(function() {
+                            $scope.$apply(function() {
+                            window.history.back();
+                            });
+                        }, 2000);
+                    }
+
                     $scope.guardar = function(){
                         $scope.dirimg = $scope.dirimg.slice(3);
                         console.log($scope.dirimg);

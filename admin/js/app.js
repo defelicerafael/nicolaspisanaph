@@ -59,9 +59,9 @@ angular.module('App', ['ngMaterial', 'ngMessages','config','Header','ngAnimate',
     //FOTOS DEL DIRECTORIO //
     
     //Mostrar fotos
-    app.showDirectory = function (){
+    app.showDirectory = function (d){
             //console.log(app.dir_img);
-            $http({method: 'POST',url: 'directives/uploader/server/directories.php',data:{dir:app.dir_img}})
+            $http({method: 'POST',url: 'directives/uploader/server/directories.php',data:{dir:d}})
             .then(function successCallback(response) {
                 app.fotosDirectorio = response.data;
                 //console.log(app.fotosDirectorio);
@@ -122,7 +122,7 @@ angular.module('App', ['ngMaterial', 'ngMessages','config','Header','ngAnimate',
                  app.isEditing = false;
                  $timeout(function() {
                     $scope.$apply(function() {
-                        $location.url('/panel/');
+                    window.history.back();
                     });
                 }, 2000);
                 
@@ -130,6 +130,43 @@ angular.module('App', ['ngMaterial', 'ngMessages','config','Header','ngAnimate',
             });
         };
 
+
+        app.insertarFotoBlog = function (areaId,text){
+            var txtarea = document.getElementById(areaId);
+            var scrollPos = txtarea.scrollTop;
+            var strPos = 0;
+            var br = ((txtarea.selectionStart || txtarea.selectionStart == '0') ? 
+                "ff" : (document.selection ? "ie" : false ) );
+            if (br == "ie") { 
+                txtarea.focus();
+                var range = document.selection.createRange();
+                range.moveStart ('character', -txtarea.value.length);
+                strPos = range.text.length;
+            }
+            else if (br == "ff") strPos = txtarea.selectionStart;
+            
+            var front = (txtarea.value).substring(0,strPos);  
+            var back = (txtarea.value).substring(strPos,txtarea.value.length); 
+            txtarea.value=front+"<img src= \""+text+"\" alt=\" \" title=\" \" class=\" w-100 \" >"+back;
+            strPos = strPos + text.length;
+            if (br == "ie") { 
+                txtarea.focus();
+                var range = document.selection.createRange();
+                range.moveStart ('character', -txtarea.value.length);
+                range.moveStart ('character', strPos);
+                range.moveEnd ('character', 0);
+                range.select();
+            }
+            else if (br == "ff") {
+                txtarea.selectionStart = strPos;
+                txtarea.selectionEnd = strPos;
+                txtarea.focus();
+            }
+            txtarea.scrollTop = scrollPos;
+            document.body.dispatchEvent(ke);
+        };
+        
+        
         app.EditarCaousel = function (fotos,idi,ev){
             //console.log(fotos,id);
             app.isEditing=true;

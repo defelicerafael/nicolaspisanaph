@@ -23,7 +23,7 @@
         const xmlhttp = new XMLHttpRequest();
         xmlhttp.onload = function() {
             var json = JSON.parse(this.responseText);
-            //console.log(json);
+            console.log(json);
             for(x in json){
                 //console.log(x,json[x]);
                 templateFotos += '<div class="mansonry_column" id="columna-'+x+'">'
@@ -79,4 +79,4 @@
         xmlhttp.send();
     }
 
-    traerFotos('novias',0,9,3);
+    traerFotos('portfolio',0,9,3);

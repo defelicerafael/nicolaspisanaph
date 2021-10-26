@@ -24,15 +24,15 @@ class Sql
     
     function connect(){
   //CASA  
-    /*$this->servername = "localhost";
+    $this->servername = "localhost";
     $this->username = "root";
     $this->password = "manjarlo1";
-    $this->dbname = "elblogdenat";*/
+    $this->dbname = "nicopisana";
   // ONLINE  
-    $this->servername = "localhost";
+   /* $this->servername = "localhost";
     $this->username = "c2300137_natt";
     $this->password = "WU31suzapo";
-    $this->dbname = "c2300137_natt";
+    $this->dbname = "c2300137_natt";*/
     
           
      // Create connection

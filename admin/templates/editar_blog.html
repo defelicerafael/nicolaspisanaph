@@ -25,10 +25,25 @@
         <!--<text-angular ng-model="ctrl.blog[0].texto"></text-angular>-->
         <md-input-container class="md-block">
             <label>Texto</label>
-            <textarea ng-model="ctrl.blog[0].texto" md-maxlength="10000" rows="5" md-select-on-focus></textarea>
+            <textarea id="blogTxt" ng-model="ctrl.blog[0].texto" md-maxlength="10000" rows="5" md-select-on-focus></textarea>
           </md-input-container>
         <div layout="row" layout-align="end center">   
             <md-button type="submit" class="md-raised md-primary">EDITAR</md-button>
         </div>
     </form>
+</md-content>
+<md-content>
+    <fieldset style="border: dotted gray 3px;">
+        <legend style="text-align:center;">INSERTAR UNA FOTO</legend>
+        <div ng-init="ctrl.showDirectory('blog');" layout="row" layout-align="start start" layout-xs="column">
+            <div ng-repeat="f in ctrl.fotosDirectorio track by $index" layout="column">
+                <img ng-src="../img/home/blog/{{f.img}}" style="width: 200px; height: auto;" />
+                <br/>
+                <!--<span>LINK: img/home/blog/{{f.img}}</span>-->
+                <md-button class="md-raised md-primary" ng-click="ctrl.EditLink({'img':'img/home/blog/'+f.img},'blog',ctrl.idArt,2)">TAPA</md-button>
+                <md-button class="md-raised" ng-click="ctrl.insertarFotoBlog('blogTxt','img/home/blog/'+f.img)">ELEGIR</md-button>
+                <md-button class="md-raised md-warn" ng-click="ctrl.deleteFoto('../../../../img/home/blog/'+f.img)">BORRAR</md-button> 
+            </div>
+        </div>
+    </fieldset>
 </md-content>    

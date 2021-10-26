@@ -11,7 +11,7 @@ jobs:
     - name: FTP-Deploy-Action
       uses: SamKirkland/FTP-Deploy-Action@3.1.1
       with:
-        ftp-server: ftp://c2300137.ferozo.com/public_html
-        ftp-username: ftp@c2300137.ferozo.com
-        ftp-password: ${{ secrets.FTP_NAT }}
+        ftp-server: ftp://c2320944.ferozo.com/public_html
+        ftp-username: c2320944
+        ftp-password: ${{ secrets.FTP_NICO }}
         
